@@ -52,7 +52,7 @@ const skillsSection = {
 softwareSkills: [
   // ☁️ Cloud Platforms
   {
-    skillName: "Amazon Web Services (AWS)",
+    skillName: "Amazon Web Services",
     src: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg"
   },
   {
@@ -60,7 +60,7 @@ softwareSkills: [
     src: "https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg"
   },
   {
-    skillName: "Google Cloud Platform (GCP)",
+    skillName: "Google Cloud Platform",
     src: "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg"
   },
 
@@ -331,7 +331,7 @@ const achievementSection = {
       footerLink: [
         {
           name: "View Publication",
-          url: "https://www.ijast.org"
+          url: "http://sersc.org/journals/index.php/IJAST/article/view/9377"
         }
       ]
     },

@@ -5,8 +5,8 @@
   width: 100%;
   overflow: hidden;
   flex-wrap: wrap;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+  margin: 0;
+  padding: 0;
 }
 
 .skills-image-div {
@@ -14,6 +14,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-height: 400px;        // prevent too much vertical height
+  padding: 20px 0;
+  overflow: hidden;
 }
 
 .skills-image-div > img {
@@ -26,7 +29,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 20px 20px 20px;
+  padding: 20px;
 }
 
 .skills-heading {
@@ -55,18 +58,22 @@
 /* CENTERED INDUSTRIAL SKILLS SECTION */
 .skills-center-section {
   width: 100vw;
-  max-width: 100vw;
-  padding: 0;
-  margin: 60px 0 0 0;
+  max-width: 100%;
+  padding: 0 40px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skills-sub-heading {
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 32px;
-  padding-left: 60px;
-  text-align: left;
   color: #ffffff;
+  align-self: flex-start;
+  padding-left: 0;
+  text-align: left;
 }
 
 .dark-mode .skills-sub-heading {
@@ -81,9 +88,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0 60px;
   box-sizing: border-box;
-  margin: 0 auto;
   list-style: none;
 }
 
@@ -150,33 +155,8 @@
 
   .skills-sub-heading {
     font-size: 24px;
+    padding-left: 0;
+    text-align: center;
+    align-self: center;
   }
-}
-
-.skills-center-section {
-  width: 100vw; /* Full viewport width */
-  max-width: 100%;
-  padding: 0 40px; /* Optional side padding */
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.skills-sub-heading {
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 32px;
-  color: #ffffff;
-  align-self: flex-start;
-  padding-left: 40px; // aligns left
-}
-
-.software-skills-main-div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1600px;
-  width: 100%;
 }

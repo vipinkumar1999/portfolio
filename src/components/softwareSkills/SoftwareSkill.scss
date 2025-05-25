@@ -24,8 +24,8 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 10px;
-  gap: 40px;
-  max-width: 1000px;
+  gap: 50px;
+  max-width: 10000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -36,21 +36,21 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px 40px;
+  gap: 40px 40px;
 }
 
 .software-skill-inline {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90px;
+  width: 100px;
   text-align: center;
   color: #ffffff;
   transition: transform 0.3s ease;
 }
 
 .software-skill-inline:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 .skill-logo {
@@ -61,7 +61,7 @@
 }
 
 .software-skill-inline > p {
-  font-size: 14px;
+  font-size: 20px;
   color: $subTitle;
   margin: 0;
 }
