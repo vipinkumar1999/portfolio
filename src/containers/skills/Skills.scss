@@ -1,0 +1,182 @@
+@import "../../_globalColor";
+
+.skills-main-div {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: wrap;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.skills-image-div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-image-div > img {
+  max-width: 90%;
+  height: auto;
+}
+
+.skills-text-div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px 20px 20px;
+}
+
+.skills-heading {
+  font-size: 56px;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.subTitle {
+  color: $subTitle;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.skills-description-list {
+  margin-top: 20px;
+}
+
+.skills-description-list p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* CENTERED INDUSTRIAL SKILLS SECTION */
+.skills-center-section {
+  width: 100vw;
+  max-width: 100vw;
+  padding: 0;
+  margin: 60px 0 0 0;
+}
+
+.skills-sub-heading {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  padding-left: 60px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.dark-mode .skills-sub-heading {
+  color: #ffffff;
+}
+
+/* INDUSTRIAL SKILL GRID */
+.dev-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 40px 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 60px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.software-skill-inline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.software-skill-inline > i {
+  color: $subTitle;
+}
+
+.software-skill-inline > i:hover {
+  color: $skillsColor;
+}
+
+.software-skill-inline > p {
+  font-size: 14px;
+  color: $subTitle;
+  margin: 0;
+}
+
+.software-skill-inline > i:hover ~ p {
+  color: $skillsColor;
+}
+
+.skill-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1380px) {
+  .skills-heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-main-div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-text-div {
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .skills-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .subTitle {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .skills-sub-heading {
+    font-size: 24px;
+  }
+}
+
+.skills-center-section {
+  width: 100vw; /* Full viewport width */
+  max-width: 100%;
+  padding: 0 40px; /* Optional side padding */
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-sub-heading {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: #ffffff;
+  align-self: flex-start;
+  padding-left: 40px; // aligns left
+}
+
+.software-skills-main-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1600px;
+  width: 100%;
+}

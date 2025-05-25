@@ -1,0 +1,67 @@
+/* Skills.scss or corresponding SCSS file */
+@import "../../_globalColor";
+
+.skills-center-section {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 40px; /* optional horizontal padding */
+}
+
+.skills-sub-heading {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.dark-mode .skills-sub-heading {
+  color: #ffffff;
+}
+
+.software-skills-main-div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dev-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px 40px;
+}
+
+.software-skill-inline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90px;
+  text-align: center;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.software-skill-inline:hover {
+  transform: scale(1.1);
+}
+
+.skill-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.software-skill-inline > p {
+  font-size: 14px;
+  color: $subTitle;
+  margin: 0;
+}
