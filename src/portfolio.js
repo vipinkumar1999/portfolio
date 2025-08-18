@@ -23,12 +23,11 @@ const greeting = {
   username: "Vipin Kumar Karthikeyan",
   title: "Hi all, I'm Vipin",
   subTitle: emoji(
-    "🚀 Cloud Data Engineer | Azure & Databricks Certified | Power BI Expert | ML Enthusiast\n 🎓 Master's in Business Analytics @UMass Amherst\n" 
+    "🚀 Cloud Data Engineer | Azure & Databricks Certified | Power BI Expert | ML Enthusiast\n 🎓 Master's in Business Analytics @UMass Amherst\n"
   ),
   resumeLink: "/resume.pdf",
   displayGreeting: true
 };
-
 
 // Social Media Links
 const socialMediaLinks = {
@@ -40,126 +39,134 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I Do",
-  subTitle: "SOLVING COMPLEX DATA CHALLENGES THROUGH CLOUD, ANALYTICS, AND AUTOMATION",
+  subTitle:
+    "SOLVING COMPLEX DATA CHALLENGES THROUGH CLOUD, ANALYTICS, AND AUTOMATION",
   skills: [
-    emoji("⚡ End-to-end Data Engineering across Azure & AWS using tools like ADF, Databricks, PySpark, and Delta Lake"),
-    emoji("⚡ Building scalable ETL/ELT pipelines and orchestrating workflows with Airflow, Azure DevOps, and GitHub"),
-    emoji("⚡ Transforming raw data into actionable insights using Power BI, Excel, and Tableau for business decisioning"),
-    emoji("⚡ Automating processes using CI/CD pipelines, version control (Git/GitHub/GitLab), and Docker containers"),
-    emoji("⚡ Applying machine learning models (PyTorch, TensorFlow, Scikit-learn) for predictive analytics and optimization"),
-    emoji("⚡ Collaborating cross-functionally with engineering, analytics, and product teams to drive data-first strategies"),
+    emoji(
+      "⚡ End-to-end Data Engineering across Azure & AWS using tools like ADF, Databricks, PySpark, and Delta Lake"
+    ),
+    emoji(
+      "⚡ Building scalable ETL/ELT pipelines and orchestrating workflows with Airflow, Azure DevOps, and GitHub"
+    ),
+    emoji(
+      "⚡ Transforming raw data into actionable insights using Power BI, Excel, and Tableau for business decisioning"
+    ),
+    emoji(
+      "⚡ Automating processes using CI/CD pipelines, version control (Git/GitHub/GitLab), and Docker containers"
+    ),
+    emoji(
+      "⚡ Applying machine learning models (PyTorch, TensorFlow, Scikit-learn) for predictive analytics and optimization"
+    ),
+    emoji(
+      "⚡ Collaborating cross-functionally with engineering, analytics, and product teams to drive data-first strategies"
+    )
   ],
-softwareSkills: [
-  // ☁️ Cloud Platforms
-  {
-    skillName: "Amazon Web Services",
-    src: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg"
-  },
-  {
-    skillName: "Microsoft Azure",
-    src: "https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg"
-  },
-  {
-    skillName: "Google Cloud Platform",
-    src: "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg"
-  },
+  softwareSkills: [
+    // ☁️ Cloud Platforms
+    {
+      skillName: "Amazon Web Services",
+      src: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg"
+    },
+    {
+      skillName: "Microsoft Azure",
+      src: "https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg"
+    },
+    {
+      skillName: "Google Cloud Platform",
+      src: "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg"
+    },
 
-  // 🧠 Machine Learning & AI
-  {
-    skillName: "Python",
-    src: "https://www.vectorlogo.zone/logos/python/python-icon.svg"
-  },
-  {
-    skillName: "PyTorch",
-    src: "https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg"
-  },
-  {
-    skillName: "Tensorflow",
-    src: "https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg"
-  },
-  {
-    skillName: "Flask",
-    src: "https://www.vectorlogo.zone/logos/palletsprojects_flask/palletsprojects_flask-icon~v2.svg"
-  },
+    // 🧠 Machine Learning & AI
+    {
+      skillName: "Python",
+      src: "https://www.vectorlogo.zone/logos/python/python-icon.svg"
+    },
+    {
+      skillName: "PyTorch",
+      src: "https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg"
+    },
+    {
+      skillName: "Tensorflow",
+      src: "https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg"
+    },
+    {
+      skillName: "Flask",
+      src: "https://www.vectorlogo.zone/logos/palletsprojects_flask/palletsprojects_flask-icon~v2.svg"
+    },
 
-  // 🛠️ Data Engineering
-  {
-    skillName: "PySpark",
-    src: "https://spark.apache.org/images/spark-logo-trademark.png"
-  },
-  {
-    skillName: "Apache Spark",
-    src: "https://spark.apache.org/images/spark-logo-trademark.png"
-  },
-  {
-    skillName: "Kafka",
-    src: "https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg"
-  },
-  {
-    skillName: "Databricks",
-    src: "https://www.vectorlogo.zone/logos/databricks/databricks-icon.svg"
-  },
-  {
-    skillName: "Snowflake",
-    src: "https://www.vectorlogo.zone/logos/snowflake/snowflake-icon.svg"
-  },
+    // 🛠️ Data Engineering
+    {
+      skillName: "PySpark",
+      src: "https://spark.apache.org/images/spark-logo-trademark.png"
+    },
+    {
+      skillName: "Apache Spark",
+      src: "https://spark.apache.org/images/spark-logo-trademark.png"
+    },
+    {
+      skillName: "Kafka",
+      src: "https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg"
+    },
+    {
+      skillName: "Databricks",
+      src: "https://www.vectorlogo.zone/logos/databricks/databricks-icon.svg"
+    },
+    {
+      skillName: "Snowflake",
+      src: "https://www.vectorlogo.zone/logos/snowflake/snowflake-icon.svg"
+    },
 
+    // 🗄️ Databases
+    {
+      skillName: "MS SQL Server",
+      src: "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
+    },
+    {
+      skillName: "PostgreSQL",
+      src: "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
+    },
 
-  // 🗄️ Databases
-  {
-    skillName: "MS SQL Server",
-    src: "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
-  },
-  {
-    skillName: "PostgreSQL",
-    src: "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
-  },
+    // 📊 BI & Visualization
+    {
+      skillName: "Power BI",
+      src: "https://cdn.worldvectorlogo.com/logos/power-bi-1.svg"
+    },
+    {
+      skillName: "Tableau",
+      src: "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/tableau-icon.svg"
+    },
+    {
+      skillName: "Excel",
+      src: "https://cdn-icons-png.flaticon.com/512/732/732220.png"
+    },
 
-  // 📊 BI & Visualization
-  {
-    skillName: "Power BI",
-    src: "https://cdn.worldvectorlogo.com/logos/power-bi-1.svg"
-  },
-  {
-    skillName: "Tableau",
-    src: "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/tableau-icon.svg"
-  },
-  {
-    skillName: "Excel",
-    src: "https://cdn-icons-png.flaticon.com/512/732/732220.png"
-  },
+    // 🚀 DevOps & CI/CD
+    {
+      skillName: "Docker",
+      src: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg"
+    },
+    {
+      skillName: "Jenkins",
+      src: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg"
+    },
 
-  // 🚀 DevOps & CI/CD
-  {
-    skillName: "Docker",
-    src: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg"
-  },
-  {
-    skillName: "Jenkins",
-    src: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg"
-  },
+    // 🧰 Tools & Version Control
+    {
+      skillName: "GitHub",
+      src: "https://cdn-icons-png.flaticon.com/512/25/25231.png"
+    },
+    {
+      skillName: "GitLab",
+      src: "https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png"
+    },
+    {
+      skillName: "JIRA",
+      src: "https://wac-cdn.atlassian.com/assets/img/favicons/atlassian/favicon.png"
+    }
+  ],
 
-  // 🧰 Tools & Version Control
-  {
-    skillName: "GitHub",
-    src: "https://cdn-icons-png.flaticon.com/512/25/25231.png"
-  },
-  {
-    skillName: "GitLab",
-    src: "https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png"
-  },
-  {
-    skillName: "JIRA",
-    src: "https://wac-cdn.atlassian.com/assets/img/favicons/atlassian/favicon.png"
-  }
-]
-
-,
   display: true
 };
-
-
-
 
 // Education Section
 
@@ -190,7 +197,6 @@ const educationInfo = {
     }
   ]
 };
-
 
 // Your top 3 proficient stacks/tech experience
 
@@ -248,8 +254,6 @@ const workExperiences = {
     }
   ]
 };
-
-
 
 /* Your Open Source Section to View Your Github Pinned Projects
 To know how to get github key look at readme.md */
@@ -313,7 +317,8 @@ const achievementSection = {
     },
     {
       title: "Databricks Certified Data Engineer Associate",
-      subtitle: "Credentialed in scalable data engineering using Apache Spark on Databricks.",
+      subtitle:
+        "Credentialed in scalable data engineering using Apache Spark on Databricks.",
       image: require("./assets/images/databricksLogo.png"),
       imageAlt: "Databricks",
       footerLink: [
@@ -325,7 +330,8 @@ const achievementSection = {
     },
     {
       title: "Research Publication – IJAST Journal",
-      subtitle: "Co-authored 'Breast Cancer Prediction Using Machine Learning' (April 2020).",
+      subtitle:
+        "Co-authored 'Breast Cancer Prediction Using Machine Learning' (April 2020).",
       image: require("./assets/images/publicationLogo.png"),
       imageAlt: "IJAST Publication",
       footerLink: [
@@ -337,7 +343,8 @@ const achievementSection = {
     },
     {
       title: "Star Award – Thorogood Associates",
-      subtitle: "Recognized in June 2024 for exceptional project delivery and stakeholder engagement.",
+      subtitle:
+        "Recognized in June 2024 for exceptional project delivery and stakeholder engagement.",
       image: require("./assets/images/thorogood.png"),
       imageAlt: "Thorogood Star Award",
       footerLink: []
@@ -345,8 +352,6 @@ const achievementSection = {
   ],
   display: true
 };
-
-
 
 // Blogs Section
 

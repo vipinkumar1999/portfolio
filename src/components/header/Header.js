@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
@@ -17,7 +17,7 @@ import {
 } from "../../portfolio";
 
 function Header() {
-  const { isDark } = useContext(StyleContext);
+  const {isDark} = useContext(StyleContext);
 
   const viewExperience = workExperiences.display;
   const viewOpenSource = openSource.display;
@@ -38,7 +38,11 @@ function Header() {
         </a>
 
         <input className="menu-btn" type="checkbox" id="menu-btn" />
-        <label className="menu-icon" htmlFor="menu-btn" style={{ color: "white" }}>
+        <label
+          className="menu-icon"
+          htmlFor="menu-btn"
+          style={{color: "white"}}
+        >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
 
