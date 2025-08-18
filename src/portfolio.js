@@ -219,11 +219,11 @@ const workExperiences = {
   display: true,
   experience: [
     {
-      role: "Cloud Engineer Intern (Incoming)",
+      role: "Cloud Analytics Engineer",
       company: "Waters Corporation",
       companylogo: require("./assets/images/waters.png"),
-      date: "May 2025 – August 2025",
-      desc: "I'll be joining Waters this summer as a Cloud Engineer Intern, where I’ll work with IT and Engineering teams to build and deploy cloud-first solutions that support their enterprise platforms."
+      date: "June 2025 – August 2025",
+      desc: "During my Waters Corporation internship, I developed a cloud management ecosystem that transformed multi-cloud infrastructure monitoring and optimization. I built a real-time observability platform tracking Azure and AWS costs, integrated ServiceNow and Jira for workload management, and created Power BI dashboards. The centerpiece was an Azure OpenAI chatbot allowing conversational queries of cloud costs, tickets, and metrics. This automated solution reduced cloud spending by 15% and improved operational efficiency."
     },
     {
       role: "Lead – Data & Analytics",
