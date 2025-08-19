@@ -201,22 +201,22 @@ const educationInfo = {
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
-  viewSkillBars: false, //Set it to true to show Proficiency Section
+  viewSkillBars: false, // Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      Stack: "Frontend/Design", // Insert stack or technology you have experience in
+      progressPercentage: "90%", // Insert relative proficiency in percentage
     },
     {
       Stack: "Backend",
-      progressPercentage: "70%"
+      progressPercentage: "70%",
     },
     {
       Stack: "Programming",
-      progressPercentage: "60%"
-    }
+      progressPercentage: "60%",
+    },
   ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: false, // Set true to display codersrank badges section; need to change your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
 
 // Work experience section
@@ -229,30 +229,34 @@ const workExperiences = {
       company: "Waters Corporation",
       companylogo: require("./assets/images/waters.png"),
       date: "June 2025 – August 2025",
-      desc: "During my Waters Corporation internship, I developed a cloud management ecosystem that transformed multi-cloud infrastructure monitoring and optimization. I built a real-time observability platform tracking Azure and AWS costs, integrated ServiceNow and Jira for workload management, and created Power BI dashboards. The centerpiece was an Azure OpenAI chatbot allowing conversational queries of cloud costs, tickets, and metrics. This automated solution reduced cloud spending by 15% and improved operational efficiency."
+      desc:
+        "During my Waters Corporation internship, I developed a cloud management ecosystem that transformed multi-cloud infrastructure monitoring and optimization. I built a real-time observability platform tracking Azure and AWS costs, integrated ServiceNow and Jira for workload management, and created Power BI dashboards. The centerpiece was an Azure OpenAI chatbot allowing conversational queries of cloud costs, tickets, and metrics. This automated solution reduced cloud spending by 15% and improved operational efficiency.",
     },
     {
       role: "Lead – Data & Analytics",
       company: "Thorogood Associates",
       companylogo: require("./assets/images/thorogood.png"),
       date: "July 2022 – July 2024",
-      desc: "I led end-to-end data engineering solutions for Fortune 100 clients using Azure Data Factory, Databricks, and Power BI. I built pipelines that processed 500K+ invoices and 100K+ supplier records, integrated SAP data into an Azure Data Lake, and automated everything with CI/CD in Azure DevOps. I also created executive dashboards for sustainability KPIs and improved report refresh times by 40% using Delta Lake and optimized storage."
+      desc:
+        "I led end-to-end data engineering solutions for Fortune 100 clients using Azure Data Factory, Databricks, and Power BI. I built pipelines that processed 500K+ invoices and 100K+ supplier records, integrated SAP data into an Azure Data Lake, and automated everything with CI/CD in Azure DevOps. I also created executive dashboards for sustainability KPIs and improved report refresh times by 40% using Delta Lake and optimized storage.",
     },
     {
       role: "Data Engineer",
       company: "EXL Service",
       companylogo: require("./assets/images/exlservice.png"),
       date: "July 2021 – June 2022",
-      desc: "I migrated on-prem systems to AWS and Azure, which cut infrastructure costs by 35% and boosted performance by 60%. I built high-volume ETL pipelines using AWS Glue, ADF, and integrated services like Lambda, S3, Kinesis, and Databricks to meet audit requirements and data SLAs."
+      desc:
+        "I migrated on-prem systems to AWS and Azure, which cut infrastructure costs by 35% and boosted performance by 60%. I built high-volume ETL pipelines using AWS Glue, ADF, and integrated services like Lambda, S3, Kinesis, and Databricks to meet audit requirements and data SLAs.",
     },
     {
       role: "Data Scientist",
       company: "Neewee Analytics",
       companylogo: require("./assets/images/neeweeanalytics.png"),
       date: "May 2020 – June 2021",
-      desc: "At Neewee, I built machine learning pipelines for predictive maintenance that reduced unplanned downtime by 25%. I used MQTT, PostgreSQL, Python, and Scala to develop real-time anomaly detection and automated the data prep and reporting workflows to save both time and cost."
-    }
-  ]
+      desc:
+        "At Neewee, I built machine learning pipelines for predictive maintenance that reduced unplanned downtime by 25%. I used MQTT, PostgreSQL, Python, and Scala to develop real-time anomaly detection and automated the data prep and reporting workflows to save both time and cost.",
+    },
+  ],
 };
 
 /* Your Open Source Section to View Your Github Pinned Projects
