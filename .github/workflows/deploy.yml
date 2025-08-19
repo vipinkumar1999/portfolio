@@ -16,9 +16,10 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pages: write
       id-token: write
+      actions: read
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4 # If you're using actions/checkout@v4 you must set persist-credentials to false in most cases for the deployment to work correctly.
