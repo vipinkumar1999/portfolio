@@ -6,7 +6,6 @@ import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
 // Splash Screen
-
 const splashScreen = {
   enabled: true, // set false to disable splash screen
   animation: splashAnimation,
@@ -14,7 +13,6 @@ const splashScreen = {
 };
 
 // Summary And Greeting Section
-
 const illustration = {
   animated: true // Set to false to use static SVG
 };
@@ -62,7 +60,6 @@ const skillsSection = {
     )
   ],
   softwareSkills: [
-    // ☁️ Cloud Platforms
     {
       skillName: "Amazon Web Services",
       src: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg"
@@ -75,8 +72,6 @@ const skillsSection = {
       skillName: "Google Cloud Platform",
       src: "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg"
     },
-
-    // 🧠 Machine Learning & AI
     {
       skillName: "Python",
       src: "https://www.vectorlogo.zone/logos/python/python-icon.svg"
@@ -93,8 +88,6 @@ const skillsSection = {
       skillName: "Flask",
       src: "https://www.vectorlogo.zone/logos/palletsprojects_flask/palletsprojects_flask-icon~v2.svg"
     },
-
-    // 🛠️ Data Engineering
     {
       skillName: "PySpark",
       src: "https://spark.apache.org/images/spark-logo-trademark.png"
@@ -115,8 +108,6 @@ const skillsSection = {
       skillName: "Snowflake",
       src: "https://www.vectorlogo.zone/logos/snowflake/snowflake-icon.svg"
     },
-
-    // 🗄️ Databases
     {
       skillName: "MS SQL Server",
       src: "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
@@ -125,8 +116,6 @@ const skillsSection = {
       skillName: "PostgreSQL",
       src: "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
     },
-
-    // 📊 BI & Visualization
     {
       skillName: "Power BI",
       src: "https://cdn.worldvectorlogo.com/logos/power-bi-1.svg"
@@ -139,8 +128,6 @@ const skillsSection = {
       skillName: "Excel",
       src: "https://cdn-icons-png.flaticon.com/512/732/732220.png"
     },
-
-    // 🚀 DevOps & CI/CD
     {
       skillName: "Docker",
       src: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg"
@@ -149,8 +136,6 @@ const skillsSection = {
       skillName: "Jenkins",
       src: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg"
     },
-
-    // 🧰 Tools & Version Control
     {
       skillName: "GitHub",
       src: "https://cdn-icons-png.flaticon.com/512/25/25231.png"
@@ -164,18 +149,16 @@ const skillsSection = {
       src: "https://wac-cdn.atlassian.com/assets/img/favicons/atlassian/favicon.png"
     }
   ],
-
   display: true
 };
 
 // Education Section
-
 const educationInfo = {
   display: true,
   schools: [
     {
       schoolName: "University of Massachusetts Amherst",
-      logo: require("./assets/images/umassLogo.png"), // Replace later with umassLogo.png
+      logo: require("./assets/images/umassLogo.png"),
       subHeader: "Master of Science in Business Analytics",
       duration: "September 2024 – December 2025",
       desc: "Graduate Student at the Isenberg School of Management with a focus on data engineering, machine learning, and business-focused analytics.",
@@ -186,7 +169,7 @@ const educationInfo = {
     },
     {
       schoolName: "Anna University",
-      logo: require("./assets/images/annaunivLogo.png"), // Replace later with annaunivLogo.png
+      logo: require("./assets/images/annaunivLogo.png"),
       subHeader: "Bachelor of Engineering in Computer Science",
       duration: "July 2017 – May 2020",
       desc: "Graduated with distinction, contributing to multiple ML-based research and academic projects.",
@@ -199,28 +182,26 @@ const educationInfo = {
 };
 
 // Your top 3 proficient stacks/tech experience
-
 const techStack = {
-  viewSkillBars: false, // Set it to true to show Proficiency Section
+  viewSkillBars: false,
   experience: [
     {
-      Stack: "Frontend/Design", // Insert stack or technology you have experience in
-      progressPercentage: "90%", // Insert relative proficiency in percentage
+      Stack: "Frontend/Design",
+      progressPercentage: "90%"
     },
     {
       Stack: "Backend",
-      progressPercentage: "70%",
+      progressPercentage: "70%"
     },
     {
       Stack: "Programming",
-      progressPercentage: "60%",
-    },
+      progressPercentage: "60%"
+    }
   ],
-  displayCodersrank: false, // Set true to display codersrank badges section; need to change your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: false
 };
 
 // Work experience section
-
 const workExperiences = {
   display: true,
   experience: [
@@ -229,46 +210,40 @@ const workExperiences = {
       company: "Waters Corporation",
       companylogo: require("./assets/images/waters.png"),
       date: "June 2025 – August 2025",
-      desc:
-        "During my Waters Corporation internship, I developed a cloud management ecosystem that transformed multi-cloud infrastructure monitoring and optimization. I built a real-time observability platform tracking Azure and AWS costs, integrated ServiceNow and Jira for workload management, and created Power BI dashboards. The centerpiece was an Azure OpenAI chatbot allowing conversational queries of cloud costs, tickets, and metrics. This automated solution reduced cloud spending by 15% and improved operational efficiency.",
+      desc: "During my Waters Corporation internship, I developed a cloud management ecosystem that transformed multi-cloud infrastructure monitoring and optimization. I built a real-time observability platform tracking Azure and AWS costs, integrated ServiceNow and Jira for workload management, and created Power BI dashboards. The centerpiece was an Azure OpenAI chatbot allowing conversational queries of cloud costs, tickets, and metrics. This automated solution reduced cloud spending by 15% and improved operational efficiency."
     },
     {
       role: "Lead – Data & Analytics",
       company: "Thorogood Associates",
       companylogo: require("./assets/images/thorogood.png"),
       date: "July 2022 – July 2024",
-      desc:
-        "I led end-to-end data engineering solutions for Fortune 100 clients using Azure Data Factory, Databricks, and Power BI. I built pipelines that processed 500K+ invoices and 100K+ supplier records, integrated SAP data into an Azure Data Lake, and automated everything with CI/CD in Azure DevOps. I also created executive dashboards for sustainability KPIs and improved report refresh times by 40% using Delta Lake and optimized storage.",
+      desc: "I led end-to-end data engineering solutions for Fortune 100 clients using Azure Data Factory, Databricks, and Power BI. I built pipelines that processed 500K+ invoices and 100K+ supplier records, integrated SAP data into an Azure Data Lake, and automated everything with CI/CD in Azure DevOps. I also created executive dashboards for sustainability KPIs and improved report refresh times by 40% using Delta Lake and optimized storage."
     },
     {
       role: "Data Engineer",
       company: "EXL Service",
       companylogo: require("./assets/images/exlservice.png"),
       date: "July 2021 – June 2022",
-      desc:
-        "I migrated on-prem systems to AWS and Azure, which cut infrastructure costs by 35% and boosted performance by 60%. I built high-volume ETL pipelines using AWS Glue, ADF, and integrated services like Lambda, S3, Kinesis, and Databricks to meet audit requirements and data SLAs.",
+      desc: "I migrated on-prem systems to AWS and Azure, which cut infrastructure costs by 35% and boosted performance by 60%. I built high-volume ETL pipelines using AWS Glue, ADF, and integrated services like Lambda, S3, Kinesis, and Databricks to meet audit requirements and data SLAs."
     },
     {
       role: "Data Scientist",
       company: "Neewee Analytics",
       companylogo: require("./assets/images/neeweeanalytics.png"),
       date: "May 2020 – June 2021",
-      desc:
-        "At Neewee, I built machine learning pipelines for predictive maintenance that reduced unplanned downtime by 25%. I used MQTT, PostgreSQL, Python, and Scala to develop real-time anomaly detection and automated the data prep and reporting workflows to save both time and cost.",
-    },
-  ],
+      desc: "At Neewee, I built machine learning pipelines for predictive maintenance that reduced unplanned downtime by 25%. I used MQTT, PostgreSQL, Python, and Scala to develop real-time anomaly detection and automated the data prep and reporting workflows to save both time and cost."
+    }
+  ]
 };
 
 /* Your Open Source Section to View Your Github Pinned Projects
 To know how to get github key look at readme.md */
-
 const openSource = {
-  showGithubProfile: "false", // Set true or false to show Contact profile using Github, defaults to true
-  display: false // Set false to hide this section, defaults to true
+  showGithubProfile: "false",
+  display: false
 };
 
 // Some big projects you have worked on
-
 const bigProjects = {
   title: "Big Projects",
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
@@ -282,7 +257,6 @@ const bigProjects = {
           name: "Visit Website",
           url: "http://saayahealth.com/"
         }
-        //  you can add extra buttons here.
       ]
     },
     {
@@ -297,12 +271,10 @@ const bigProjects = {
       ]
     }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: false
 };
 
 // Achievement Section
-// Include certificates, talks etc
-
 const achievementSection = {
   title: emoji("Achievements and Certifications 🏆"),
   subtitle: "Recognitions, Certifications, and Accomplishments",
@@ -358,12 +330,11 @@ const achievementSection = {
 };
 
 // Blogs Section
-
 const blogSection = {
   title: "Blogs",
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "false", // Set true to display fetched medium blogs instead of hardcoded ones
+  displayMediumBlogs: "false",
   blogs: [
     {
       url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
@@ -378,17 +349,15 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: false
 };
 
 // Talks Sections
-
 const talkSection = {
   title: "TALKS",
   subtitle: emoji(
     "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
   ),
-
   talks: [
     {
       title: "Build Actions For Google Assistant",
@@ -397,29 +366,24 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: false
 };
 
 // Podcast Section
-
 const podcastSection = {
   title: emoji("Podcast 🎙️"),
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-  // Please Provide with Your Podcast embeded Link
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: false
 };
 
 // Resume Section
 const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
-
-  // Please Provide with Your Podcast embeded Link
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 const contactInfo = {
@@ -431,13 +395,12 @@ const contactInfo = {
 };
 
 // Twitter Section
-
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: false // Set true to display this section, defaults to false
+  userName: "twitter",
+  display: false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = false;
 
 export {
   illustration,
