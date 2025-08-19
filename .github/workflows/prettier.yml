@@ -21,6 +21,14 @@ jobs:
         run: |
           npm install
 
-      - name: Check Format
+      - name: Format Code
         run: |
-          npm run check-format
+          npm run format
+          
+      - name: Check for Changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Code formatting issues found. Please run 'npm run format' locally."
+            git status --porcelain
+            exit 1
+          fi
