@@ -21,7 +21,7 @@ const greeting = {
   username: "Vipin Kumar Karthikeyan",
   title: "Hi all, I'm Vipin",
   subTitle: emoji(
-    "🚀 Cloud Data Engineer | Azure & Databricks Certified | Power BI Expert | ML Enthusiast\n 🎓 Master's in Business Analytics @UMass Amherst\n"
+    "🚀 Technical Business Intelligence Engineer | Azure Data Engineer & Databricks Certified | Power BI | Turning Data into Business Decisions\n"
   ),
   resumeLink: "/resume.pdf",
   displayGreeting: true
@@ -206,14 +206,20 @@ const workExperiences = {
   display: true,
   experience: [
     {
+      role: "Technical Business Intelligence Engineer",
+      company: "Waters Corporation",
+      companylogo: require("./assets/images/waters.png"),
+      date: "February 20256 – Present"
+    },
+    {
       role: "Cloud Analytics Engineer",
       company: "Waters Corporation",
       companylogo: require("./assets/images/waters.png"),
-      date: "June 2025 – Present",
+      date: "June 2025 – December 2025",
       desc: "During my Waters Corporation internship, I developed a cloud management ecosystem that transformed multi-cloud infrastructure monitoring and optimization. I built a real-time observability platform tracking Azure and AWS costs, integrated ServiceNow and Jira for workload management, and created Power BI dashboards. The centerpiece was an Azure OpenAI chatbot allowing conversational queries of cloud costs, tickets, and metrics. This automated solution reduced cloud spending by 15% and improved operational efficiency."
     },
     {
-      role: "Lead – Data & Analytics",
+      role: "Data & AI Consultant",
       company: "Thorogood Associates",
       companylogo: require("./assets/images/thorogood.png"),
       date: "July 2022 – July 2024",
@@ -223,14 +229,14 @@ const workExperiences = {
       role: "Data Engineer",
       company: "EXL Service",
       companylogo: require("./assets/images/exlservice.png"),
-      date: "July 2021 – June 2022",
+      date: "December 2021 – June 2022",
       desc: "I migrated on-prem systems to AWS and Azure, which cut infrastructure costs by 35% and boosted performance by 60%. I built high-volume ETL pipelines using AWS Glue, ADF, and integrated services like Lambda, S3, Kinesis, and Databricks to meet audit requirements and data SLAs."
     },
     {
-      role: "Data Scientist",
+      role: "Associate Data Scientist",
       company: "Neewee Analytics",
       companylogo: require("./assets/images/neeweeanalytics.png"),
-      date: "May 2020 – June 2021",
+      date: "May 2020 – July 2021",
       desc: "At Neewee, I built machine learning pipelines for predictive maintenance that reduced unplanned downtime by 25%. I used MQTT, PostgreSQL, Python, and Scala to develop real-time anomaly detection and automated the data prep and reporting workflows to save both time and cost."
     }
   ]
