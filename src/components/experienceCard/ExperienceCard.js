@@ -48,36 +48,77 @@ export default function ExperienceCard({cardInfo, isDark}) {
         />
       </div>
       <div className="experience-text-details">
-        <h5
-          className={
-            isDark
-              ? "experience-text-role dark-mode-text"
-              : "experience-text-role"
-          }
-        >
-          {cardInfo.role}
-        </h5>
-        <h5
-          className={
-            isDark
-              ? "experience-text-date dark-mode-text"
-              : "experience-text-date"
-          }
-        >
-          {cardInfo.date}
-        </h5>
-        <p
-          className={
-            isDark
-              ? "subTitle experience-text-desc dark-mode-text"
-              : "subTitle experience-text-desc"
-          }
-        >
-          {cardInfo.desc}
-        </p>
-        <ul>
-          <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
-        </ul>
+        {cardInfo.roles ? (
+          cardInfo.roles.map((roleInfo, i) => (
+            <div key={i} className={i > 0 ? "experience-role-section" : ""}>
+              <h5
+                className={
+                  isDark
+                    ? "experience-text-role dark-mode-text"
+                    : "experience-text-role"
+                }
+              >
+                {roleInfo.role}
+              </h5>
+              <h5
+                className={
+                  isDark
+                    ? "experience-text-date dark-mode-text"
+                    : "experience-text-date"
+                }
+              >
+                {roleInfo.date}
+              </h5>
+              {roleInfo.desc && (
+                <p
+                  className={
+                    isDark
+                      ? "subTitle experience-text-desc dark-mode-text"
+                      : "subTitle experience-text-desc"
+                  }
+                >
+                  {roleInfo.desc}
+                </p>
+              )}
+            </div>
+          ))
+        ) : (
+          <>
+            <h5
+              className={
+                isDark
+                  ? "experience-text-role dark-mode-text"
+                  : "experience-text-role"
+              }
+            >
+              {cardInfo.role}
+            </h5>
+            <h5
+              className={
+                isDark
+                  ? "experience-text-date dark-mode-text"
+                  : "experience-text-date"
+              }
+            >
+              {cardInfo.date}
+            </h5>
+            <p
+              className={
+                isDark
+                  ? "subTitle experience-text-desc dark-mode-text"
+                  : "subTitle experience-text-desc"
+              }
+            >
+              {cardInfo.desc}
+            </p>
+            <ul>
+              <GetDescBullets
+                descBullets={cardInfo.descBullets}
+                isDark={isDark}
+              />
+            </ul>
+          </>
+        )}
       </div>
     </div>
   );

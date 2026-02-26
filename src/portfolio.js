@@ -206,17 +206,20 @@ const workExperiences = {
   display: true,
   experience: [
     {
-      role: "Technical Business Intelligence Engineer",
       company: "Waters Corporation",
       companylogo: require("./assets/images/waters.png"),
-      date: "February 20256 – Present"
-    },
-    {
-      role: "Cloud Analytics Engineer",
-      company: "Waters Corporation",
-      companylogo: require("./assets/images/waters.png"),
-      date: "June 2025 – December 2025",
-      desc: "During my Waters Corporation internship, I developed a cloud management ecosystem that transformed multi-cloud infrastructure monitoring and optimization. I built a real-time observability platform tracking Azure and AWS costs, integrated ServiceNow and Jira for workload management, and created Power BI dashboards. The centerpiece was an Azure OpenAI chatbot allowing conversational queries of cloud costs, tickets, and metrics. This automated solution reduced cloud spending by 15% and improved operational efficiency."
+      roles: [
+        {
+          role: "Technical Business Intelligence Engineer",
+          date: "February 2026 – Present",
+          desc: "Driving enterprise business intelligence initiatives at Waters Corporation, translating complex data requirements into scalable Analytics solutions. Focused on delivering executive-grade BI reporting, optimizing cloud data infrastructure, and enabling data-driven decision-making across business and technology stakeholders."
+        },
+        {
+          role: "Cloud Analytics Engineer",
+          date: "June 2025 – December 2025",
+          desc: "During my Waters Corporation internship, I developed a cloud management ecosystem that transformed multi-cloud infrastructure monitoring and optimization. I built a real-time observability platform tracking Azure and AWS costs, integrated ServiceNow and Jira for workload management, and created Power BI dashboards. The centerpiece was an Azure OpenAI chatbot allowing conversational queries of cloud costs, tickets, and metrics. This automated solution reduced cloud spending by 15% and improved operational efficiency."
+        }
+      ]
     },
     {
       role: "Data & AI Consultant",
