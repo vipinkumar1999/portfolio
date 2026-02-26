@@ -1,6 +1,7 @@
 .education-heading {
   font-size: 56px;
   font-weight: 400;
+  text-align: center;
 }
 
 .education-section {
@@ -38,7 +39,7 @@
 
 @media (max-width: 768px) {
   .education-card-container {
-    padding-top: 0px;
+    padding-top: 220px;
   }
   .education-heading {
     font-size: 30px;

@@ -38,25 +38,25 @@ const socialMediaLinks = {
 const skillsSection = {
   title: "What I Do",
   subTitle:
-    "SOLVING COMPLEX DATA CHALLENGES THROUGH CLOUD, ANALYTICS, AND AUTOMATION",
+    "BRIDGING BUSINESS STRATEGY AND TECHNOLOGY THROUGH DATA-DRIVEN SOLUTIONS",
   skills: [
     emoji(
-      "⚡ End-to-end Data Engineering across Azure & AWS using tools like ADF, Databricks, PySpark, and Delta Lake"
+      "Translating complex business requirements into scalable data engineering solutions across cloud platforms"
     ),
     emoji(
-      "⚡ Building scalable ETL/ELT pipelines and orchestrating workflows with Airflow, Azure DevOps, and GitHub"
+      "Delivering actionable insights through enterprise-grade dashboards and reports that drive informed decision-making"
     ),
     emoji(
-      "⚡ Transforming raw data into actionable insights using Power BI, Excel, and Tableau for business decisioning"
+      "Optimizing cloud infrastructure costs and performance through governance frameworks and automation"
     ),
     emoji(
-      "⚡ Automating processes using CI/CD pipelines, version control (Git/GitHub/GitLab), and Docker containers"
+      "Streamlining business operations by integrating data workflows with enterprise tools and platforms"
     ),
     emoji(
-      "⚡ Applying machine learning models (PyTorch, TensorFlow, Scikit-learn) for predictive analytics and optimization"
+      "Leveraging AI and machine learning to automate processes and unlock predictive capabilities for business growth"
     ),
     emoji(
-      "⚡ Collaborating cross-functionally with engineering, analytics, and product teams to drive data-first strategies"
+      "Collaborating across business and technology teams to align data strategy with organizational goals"
     )
   ],
   softwareSkills: [
@@ -163,6 +163,7 @@ const educationInfo = {
       duration: "September 2024 – December 2025",
       desc: "Graduate Student at the Isenberg School of Management with a focus on data engineering, machine learning, and business-focused analytics.",
       descBullets: [
+        "GPA: 4.0 / 4.0",
         "Coursework: Business Intelligence, Data Visualization, Python, Machine Learning, Statistics, Cloud Platforms, Agile Scrum, Supply Chain Analytics",
         "Capstone project: Built AI-powered decision systems integrating real-time data pipelines using Databricks and Azure"
       ]
@@ -170,8 +171,8 @@ const educationInfo = {
     {
       schoolName: "Anna University",
       logo: require("./assets/images/annaunivLogo.png"),
-      subHeader: "Bachelor of Engineering in Computer Science",
-      duration: "July 2017 – May 2020",
+      subHeader: "Master of Science in Computer Science",
+      duration: "July 2017 – May 2022",
       desc: "Graduated with distinction, contributing to multiple ML-based research and academic projects.",
       descBullets: [
         "Published paper: 'Breast Cancer Prediction using Machine Learning' (IJAST Journal)",
