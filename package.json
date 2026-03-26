@@ -1,58 +1,46 @@
 {
-  "homepage": "https://vipinkumar1999.github.io/portfolio",
-  "name": "vipinkumar1999.github.io",
-  "version": "0.1.0",
+  "name": "moncy-portfolio",
   "private": true,
-  "dependencies": {
-    "colorthief": "^2.3.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "jest-canvas-mock": "^2.3.1",
-    "lottie-react": "^2.4.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-easy-emoji": "^1.8.1",
-    "react-headroom": "^3.0.0",
-    "react-reveal": "^1.2.2",
-    "react-scripts": "^5.0.1",
-    "react-test-renderer": "^16.10.2",
-    "react-twitter-embed": "3.0.3",
-    "sass": "^1.32.8"
-  },
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
+    "dev": "vite --host",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
     "predeploy": "npm run build",
-    "start": "node fetch.js && react-scripts start",
-    "build": "node fetch.js && react-scripts build",
-    "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "format": "npx prettier --write \"./**/*.{js,css,json,scss}\"",
-    "check-format": "npx prettier -c \"./**/*.{js,css,json,scss}\""
+    "deploy": "gh-pages -d dist"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.3%",
-      "not ie 11",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      ">0.3%",
-      "not ie 11",
-      "not dead",
-      "not op_mini all",
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@gsap/react": "^2.1.1",
+    "@react-three/cannon": "^6.6.0",
+    "@react-three/drei": "^9.120.4",
+    "@react-three/fiber": "^8.17.10",
+    "@react-three/postprocessing": "^2.16.3",
+    "@react-three/rapier": "^1.5.0",
+    "@types/three": "^0.168.0",
+    "@vercel/analytics": "^1.4.1",
+    "gsap": "^3.12.7",
+    "gsap-trial": "^3.12.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-fast-marquee": "^1.6.5",
+    "react-icons": "^5.3.0",
+    "three": "^0.168.0",
+    "three-stdlib": "^2.33.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "dotenv": "^8.2.0",
+    "@eslint/js": "^9.9.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
     "gh-pages": "^6.3.0",
-    "prettier": "^2.3.1"
+    "globals": "^15.9.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.1",
+    "vite": "^5.4.1"
   }
 }
