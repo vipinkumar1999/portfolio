@@ -88,6 +88,23 @@
   letter-spacing: 1px;
 }
 
+@media only screen and (max-width: 599px) {
+  .about-me p {
+    font-size: 19px;
+    line-height: 27px;
+    letter-spacing: 0.3px;
+  }
+  .about-me h3 {
+    font-size: 14px;
+    letter-spacing: 4px;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+  .about-me p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
 @media only screen and (min-width: 600px) {
   .about-section {
     justify-content: center;

@@ -18,7 +18,7 @@ const Education = () => {
                 <h4>M.S. Business Analytics</h4>
                 <h5>University of Massachusetts Amherst · Isenberg School of Management</h5>
               </div>
-              <h3>2025</h3>
+              <h3>Sep 2024 – Dec 2025</h3>
             </div>
             <p>
               GPA 4.0 / 4.0. Focused on data engineering, machine learning, and business analytics. Capstone: AI-powered decision systems with real-time data pipelines on Databricks and Azure.
@@ -31,7 +31,7 @@ const Education = () => {
                 <h4>M.Sc Data Science</h4>
                 <h5>Coimbatore Institute of Technology · Coimbatore, India</h5>
               </div>
-              <h3>2022</h3>
+              <h3>Jul 2017 – May 2022</h3>
             </div>
             <p>
               Graduated with distinction. Published research on Breast Cancer Prediction using Machine Learning (IJAST Journal). Led departmental academic clubs and organised technical symposiums.
