@@ -1,14 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 import "./styles/Navbar.css";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 export let smoother: ScrollSmoother;
 
+const navLinks = [
+  { text: "About",         href: "#about" },
+  { text: "Experience",    href: "#experience" },
+  { text: "Education",     href: "#education" },
+  { text: "Certification", href: "#certifications" },
+  { text: "Skills",        href: "#skills" },
+  { text: "Contact",       href: "#contact" },
+];
+
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
@@ -23,46 +33,63 @@ const Navbar = () => {
     smoother.scrollTop(0);
     smoother.paused(true);
 
-    let links = document.querySelectorAll(".header ul a");
-    links.forEach((elem) => {
-      let element = elem as HTMLAnchorElement;
-      element.addEventListener("click", (e) => {
-        if (window.innerWidth > 1024) {
-          e.preventDefault();
-          let elem = e.currentTarget as HTMLAnchorElement;
-          let section = elem.getAttribute("data-href");
-          smoother.scrollTo(section, true, "top top");
-        }
-      });
-    });
-    window.addEventListener("resize", () => {
-      ScrollSmoother.refresh(true);
-    });
+    window.addEventListener("resize", () => ScrollSmoother.refresh(true));
+
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setMenuOpen(false); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, []);
+
+  const handleNavClick = (href: string) => {
+    setMenuOpen(false);
+    setTimeout(() => {
+      if (window.innerWidth > 1024) {
+        smoother.scrollTo(href, true, "top top");
+      } else {
+        const el = document.querySelector(href);
+        el?.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 420);
+  };
+
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
-          VKK
-</a>
+        <a href="/#" className="navbar-title" data-cursor="disable">VKK</a>
         <span className="navbar-connect">Turning Data into Business Decisions</span>
-        <ul>
-          <li>
-            <a data-href="#about" href="#about">
-              <HoverLinks text="ABOUT" />
+
+        <button
+          className={`hamburger${menuOpen ? " hamburger--open" : ""}`}
+          onClick={() => setMenuOpen((o) => !o)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          data-cursor="disable"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
+
+      {/* Full-screen menu overlay */}
+      <div className={`nav-menu${menuOpen ? " nav-menu--open" : ""}`} aria-hidden={!menuOpen}>
+        {/* backdrop — click to close */}
+        <div className="nav-menu__backdrop" onClick={() => setMenuOpen(false)} />
+
+        <nav className="nav-menu__panel">
+          {navLinks.map((link, i) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="nav-menu__item"
+              style={{ animationDelay: menuOpen ? `${i * 0.07 + 0.1}s` : "0s" }}
+              onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
+              data-cursor="disable"
+            >
+              <span className="nav-menu__num">0{i + 1}</span>
+              {link.text}
             </a>
-          </li>
-          <li>
-            <a data-href="#experience" href="#experience">
-              <HoverLinks text="EXPERIENCE" />
-            </a>
-          </li>
-          <li>
-            <a data-href="#contact" href="#contact">
-              <HoverLinks text="CONTACT" />
-            </a>
-          </li>
-        </ul>
+          ))}
+        </nav>
       </div>
 
       <div className="landing-circle1"></div>

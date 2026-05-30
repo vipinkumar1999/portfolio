@@ -1,8 +1,10 @@
 import "./styles/Certifications.css";
 
+const base = import.meta.env.BASE_URL;
+
 const certs = [
   {
-    logo: "/images/azure.png",
+    logo: `${base}images/azure.png`,
     title: "Azure Data Engineer Associate",
     badge: "DP-203",
     description:
@@ -10,7 +12,7 @@ const certs = [
     link: "#",
   },
   {
-    logo: "/images/databricks.png",
+    logo: `${base}images/databricks.png`,
     title: "Databricks Certified Data Engineer Associate",
     badge: "",
     description:

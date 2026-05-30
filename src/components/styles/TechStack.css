@@ -1,0 +1,137 @@
+.techstack {
+  width: var(--cWidth);
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 100px 0 80px;
+}
+
+.techstack h2 {
+  font-size: 80px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.techstack-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+}
+
+.techstack-category {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.techstack-category-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 300;
+  margin: 0 0 16px 0;
+  font-family: "Geist", sans-serif;
+}
+
+.techstack-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.techstack-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.25s, background 0.25s;
+  cursor: default;
+}
+
+.techstack-card:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.techstack-card img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+.techstack-svg-icon {
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+.techstack-svg-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.techstack-card span {
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.techstack-card--suggested {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border-style: dashed;
+}
+
+.techstack-suggested-badge {
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  opacity: 0.5;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0 !important;
+}
+
+.techstack-suggested-note {
+  margin-top: 40px;
+  font-size: 11px;
+  opacity: 0.35;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 300;
+  font-family: "Geist", sans-serif;
+}
+
+.techstack-suggested-note span {
+  opacity: 0.8;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+@media screen and (max-width: 900px) {
+  .techstack h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .techstack {
+    padding: 60px 0 50px;
+  }
+}

@@ -26,14 +26,15 @@ export default function setSplitText() {
       para.split?.revert();
     }
 
+    // Split into words only — no line containers, so overflow:hidden doesn't
+    // fragment the paragraph into disconnected blocks.
     para.split = new SplitText(para, {
-      type: "lines,words",
-      linesClass: "split-line",
+      type: "words",
     });
 
     para.anim = gsap.fromTo(
       para.split!.words,
-      { autoAlpha: 0, y: 80 },
+      { autoAlpha: 0 },
       {
         autoAlpha: 1,
         scrollTrigger: {
@@ -41,10 +42,9 @@ export default function setSplitText() {
           toggleActions: ToggleAction,
           start: TriggerStart,
         },
-        duration: 1,
-        ease: "power3.out",
-        y: 0,
-        stagger: 0.02,
+        duration: 0.8,
+        ease: "power2.out",
+        stagger: 0.018,
       }
     );
   });
