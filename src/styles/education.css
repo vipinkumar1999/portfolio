@@ -1,0 +1,65 @@
+.edu {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem clamp(2rem, 5vw, 4rem);
+}
+.edu__h {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--signal);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ink);
+}
+.edu__h--spaced {
+  margin-top: 2.5rem;
+}
+.edu__item,
+.cert {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.edu__period {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-2);
+  margin-bottom: 0.4rem;
+}
+.edu__item h4,
+.cert h4 {
+  font-size: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.75rem;
+}
+.edu__school {
+  color: var(--ink-2);
+  margin: 0.3rem 0 0.7rem;
+  font-size: 0.95rem;
+}
+.edu__item p:last-child {
+  font-size: 0.97rem;
+}
+.pill {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  border: 1px solid var(--signal);
+  color: var(--signal);
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+}
+.cert__meta {
+  margin-top: 0.4rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-2);
+}
+@media (max-width: 900px) {
+  .edu {
+    grid-template-columns: 1fr;
+  }
+}

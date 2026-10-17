@@ -1,0 +1,99 @@
+.contact__lead {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+.contact__email {
+  display: inline-block;
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 5.2vw, 3.3rem);
+  line-height: 1.15;
+  color: var(--signal);
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  padding-block: 0.7rem;
+}
+.contact__cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 2.5rem clamp(2rem, 5vw, 4rem);
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+}
+.contact__links {
+  border-top: 1px solid var(--ink);
+  align-self: start;
+}
+.contact__links a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  min-height: 56px;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+}
+.contact__links a:hover span:last-child {
+  color: var(--signal);
+  transform: translateX(3px);
+}
+.contact__links a span:last-child {
+  transition: transform 0.15s;
+  color: var(--signal);
+}
+
+.form {
+  display: grid;
+  gap: 1.1rem;
+  align-content: start;
+}
+.form__field {
+  display: grid;
+  gap: 0.35rem;
+}
+.form label {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-2);
+}
+.form input,
+.form textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.7rem 0.85rem;
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-bottom: 2px solid var(--ink-2);
+  border-radius: var(--radius) var(--radius) 2px 2px;
+  resize: vertical;
+}
+.form input[aria-invalid="true"],
+.form textarea[aria-invalid="true"] {
+  border-bottom-color: var(--signal);
+}
+.form__err {
+  font-size: 0.88rem;
+  color: var(--signal);
+}
+.form .btn {
+  justify-self: start;
+}
+.form__status {
+  min-height: 1.5em;
+  font-size: 0.92rem;
+  color: var(--positive);
+}
+@media (max-width: 900px) {
+  .contact__cols {
+    grid-template-columns: 1fr;
+  }
+  .form .btn {
+    justify-self: stretch;
+  }
+}

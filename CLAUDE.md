@@ -17,41 +17,29 @@ No test suite is configured.
 ## Architecture
 
 ### Tech Stack
-React 18 + TypeScript + Vite, deployed to GitHub Pages at `/portfolio/`. All asset URLs must use `import.meta.env.BASE_URL` (e.g., `${base}images/foo.png`) — not relative paths — because of the non-root base.
+React 18 + TypeScript + Vite, deployed to GitHub Pages at `/portfolio/`. Asset URLs that live in `public/` must use `import.meta.env.BASE_URL` (see `profile.resume` in `content.ts`); `index.html` and `manifest.json` use relative paths. No animation or 3D libraries: native scroll, CSS transitions, and IntersectionObserver only.
 
-### Render Tree
-```
-App.tsx
-└── LoadingProvider (context)         # loading state + triggers initialFX on mount
-    └── MainContainer                 # layout root, desktop/mobile branching
-        ├── Cursor, Navbar, SocialIcons   # always-on UI
-        ├── CharacterModel (lazy)         # desktop: fixed overlay; mobile: inside Landing
-        └── page sections (Landing → About → WhatIDo → Career → Education → Certifications → TechStack → Contact)
-```
-
-`isDesktopView` (threshold: `window.innerWidth > 1024`) controls two things: where `CharacterModel` renders in the DOM, and whether `TechStack` renders at all on mobile.
-
-### 3D Character (`src/components/Character/`)
-Built with **raw Three.js** (not React Three Fiber). `Scene.tsx` imperatively sets up a `WebGLRenderer`, `PerspectiveCamera`, and animation loop inside a single `useEffect`. The GLTF character model is loaded via `character.ts`, with utilities split into:
-- `lighting.ts` — point/ambient light setup and the screen-glow effect
-- `animationUtils.ts` — GSAP intro sequence + idle animations
-- `mouseUtils.ts` — head-tracking via mouse/touch events
-- `resizeUtils.ts` — camera/renderer resize handler
-
-WebGL unavailability is detected at mount and triggers a CSS fallback class (`character-model--fallback`).
-
-### GSAP Scroll System
-GSAP's `ScrollSmoother` instance is created in `Navbar.tsx` and exported as `smoother` — this is the only scroll engine; native scroll is replaced. `initialFX.ts` (lazily imported by `LoadingProvider`) starts the entry animations after the character loads and fires `smoother.paused(false)`. Scroll-driven animations live in `src/components/utils/GsapScroll.ts` (`setCharTimeline` for character movement, `setAllTimeline` for career/education timelines).
-
-GSAP plugins used: `ScrollSmoother`, `ScrollTrigger`, `SplitText` — all imported from the standard `gsap` package.
+### Design: "The Analyst's Brief"
+Single-page editorial report: ruled hairlines, numbered section margin ("§01 Summary"), tabular numerals, one accent colour. Avoid gradients, glows, shadows, centered heroes and identical card grids.
 
 ### Content
-All portfolio content (career history, education, certifications, tech stack) is hardcoded directly in the component files — there are no separate data files for page content. To update personal info, edit the relevant component (`Career.tsx`, `Education.tsx`, `Certifications.tsx`, `TechStack.tsx`, etc.) directly.
+All copy lives in `src/content.ts` (profile, about, stats, experience, projectsResearch, capabilities, skills, education, certifications, `sections`). Components only present it. Edit copy there, not in components. Experience `points` are bullets; figures like $65.2M, 99.9%, 500K+ are auto-highlighted by a regex in `Experience.tsx`.
+
+### Render tree
+```
+App.tsx: skip link, Masthead, <main> (Summary, Experience, Capabilities, Skills, Education, Contact), Footer
+```
+- `components/Section.tsx` wraps every section: top hairline, sticky mono margin label (cols 1-2), body (cols 3-12), h2, and reveal-on-scroll.
+- `Masthead.tsx`: sticky header, active-section nav, mobile sheet (focus trap, Esc, scroll lock).
+- `Experience.tsx` contains the SVG-free CSS timeline (with a visually hidden table); `Contact.tsx` composes a `mailto:` from the form.
+- Hooks in `src/hooks/`: `useReveal`, `useActiveSection`.
 
 ### Styling
-Each section component has a co-located CSS file in `src/components/styles/`. There is no CSS-in-JS or utility framework.
+Plain CSS, no frameworks. `src/styles/global.css` holds tokens (`--paper`, `--paper-2`, `--ink`, `--ink-2`, `--rule`, `--signal`, `--positive`, with a `prefers-color-scheme: dark` override), reset, typography, buttons, section grid. Each component has a co-located file in `src/styles/`. `fonts.css` declares latin-only @font-face from @fontsource packages (Fraunces, Outfit, IBM Plex Mono). Theme is "Olive Field"; `--radius` sets button/input corners. `main.tsx` must import global.css before the App so component CSS can override it.
+
+Reveal animations only hide content when `<html>` has the `js` class (set by an inline script in `index.html`) and are disabled under `prefers-reduced-motion`.
 
 ## Deployment Notes
 - `vite.config.ts` sets `base: "/portfolio/"` for GitHub Pages hosting
 - `npm run deploy` uses `gh-pages` to push `dist/` to the `gh-pages` branch
-- Static assets served from `public/images/` are referenced via `import.meta.env.BASE_URL`
+- Keep `public/resume.pdf`, favicons, manifest.

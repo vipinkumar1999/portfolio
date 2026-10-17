@@ -1,0 +1,171 @@
+.tl-wrap {
+  margin: clamp(2rem, 4vw, 3rem) 0;
+}
+.tl-cap {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-2);
+  margin-bottom: 0.75rem;
+}
+.tl-scroll {
+  overflow-x: auto;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+}
+.tl {
+  min-width: 620px;
+  padding: 0.5rem 0;
+}
+.tl__row {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  align-items: center;
+  height: 2.4rem;
+}
+.tl__axis {
+  height: 1.8rem;
+}
+.tl__co {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 0.75rem;
+}
+.tl__track {
+  position: relative;
+  height: 100%;
+  margin-right: 1.5rem;
+}
+.tl__year {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 0.35rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--ink-2);
+}
+.tl__grid {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--rule);
+}
+.tl__bar {
+  position: absolute;
+  top: 50%;
+  height: 14px;
+  margin-top: -7px;
+  background: var(--ink-2);
+  border-radius: 1px;
+  transform-origin: left center;
+}
+.tl__bar.is-current {
+  background: var(--signal);
+}
+/* Narrow screens: put each label above its bar so the whole 2020–now span
+   fits the viewport and the current role is visible without side-scrolling. */
+@media (max-width: 600px) {
+  .tl {
+    min-width: 0;
+  }
+  .tl__row {
+    grid-template-columns: minmax(0, 1fr);
+    height: auto;
+  }
+  .tl__axis .tl__co {
+    display: none;
+  }
+  .tl__axis .tl__track {
+    height: 1.6rem;
+  }
+  .tl__co {
+    padding: 0.55rem 0 0.25rem;
+    font-size: 0.8rem;
+  }
+  .tl__row:not(.tl__axis) .tl__track {
+    height: 1.1rem;
+  }
+  .tl__track {
+    margin-right: 0;
+  }
+  .tl__year {
+    padding-left: 0.2rem;
+    font-size: 0.65rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal-bars .tl__bar {
+    transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .js .reveal-bars:not(.is-in) .tl__bar {
+    transform: scaleX(0);
+  }
+}
+
+.roles {
+  border-top: 1px solid var(--ink);
+}
+.role {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 1rem 1.5rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: calc(var(--mast-h) + 1rem);
+}
+.role__period {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-2);
+  padding-top: 0.35rem;
+}
+.role__title {
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.9rem;
+}
+.role__co {
+  margin: 0.35rem 0 0.75rem;
+  color: var(--ink-2);
+  font-size: 0.95rem;
+}
+.role__points {
+  max-width: 68ch;
+  display: grid;
+  gap: 0.55rem;
+}
+.role__points li {
+  position: relative;
+  padding-left: 1.1rem;
+}
+.role__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 0.45rem;
+  height: 1px;
+  background: var(--ink-2);
+}
+.fig {
+  font-weight: 600;
+  color: var(--signal);
+  font-variant-numeric: tabular-nums lining-nums;
+  white-space: nowrap;
+}
+@media (max-width: 700px) {
+  .role {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+  .role__period {
+    padding-top: 0;
+  }
+}

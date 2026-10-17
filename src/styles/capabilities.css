@@ -1,0 +1,39 @@
+.caps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--ink);
+}
+.cap {
+  padding: 1.5rem clamp(1rem, 2vw, 1.75rem) 0.5rem;
+}
+.cap:first-child {
+  padding-left: 0;
+}
+.cap + .cap {
+  border-left: 1px solid var(--rule);
+}
+.cap .kicker {
+  color: var(--signal);
+  margin-bottom: 0.75rem;
+}
+.cap h3 {
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  margin-bottom: 0.9rem;
+}
+.cap p:last-child {
+  color: var(--ink-2);
+  font-size: 0.98rem;
+}
+@media (max-width: 900px) {
+  .caps {
+    grid-template-columns: 1fr;
+  }
+  .cap,
+  .cap:first-child {
+    padding: 1.5rem 0;
+  }
+  .cap + .cap {
+    border-left: 0;
+    border-top: 1px solid var(--rule);
+  }
+}

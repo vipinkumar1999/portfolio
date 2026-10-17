@@ -1,47 +1,51 @@
-import "./styles/Career.css";
+import { certifications, education, projectsResearch } from "../content";
+import Section from "./Section";
+import "../styles/education.css";
 
-const Education = () => {
-  return (
-    <div className="career-section education-section section-container" id="education">
-      <div className="career-container">
-        <h2>
-          Education
-        </h2>
-        <div className="career-info">
-          <div className="career-timeline">
-            <div className="career-dot"></div>
-          </div>
-
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>M.S. Business Analytics</h4>
-                <h5>University of Massachusetts Amherst · Isenberg School of Management</h5>
-              </div>
-              <h3>Sep 2024 – Dec 2025</h3>
-            </div>
-            <p>
-              GPA 4.0 / 4.0. Focused on data engineering, machine learning, and business analytics. Capstone: AI-powered decision systems with real-time data pipelines on Databricks and Azure.
+const Education = () => (
+  <Section id="education" title="Education & certifications" className="education">
+    <div className="edu">
+      <div>
+        <h3 className="edu__h">Education</h3>
+        {education.map((e) => (
+          <article key={e.degree} className="edu__item">
+            <p className="edu__period">{e.period}</p>
+            <h4>{e.degree}</h4>
+            <p className="edu__school">
+              {e.school} · {e.detail}
             </p>
-          </div>
+            <p>{e.summary}</p>
+          </article>
+        ))}
+      </div>
+      <div>
+        <h3 className="edu__h">Certifications</h3>
+        <ul className="certs">
+          {certifications.map((c) => (
+            <li key={c.title} className="cert">
+              <h4>
+                {c.title}
+                {c.code && <span className="pill">{c.code}</span>}
+              </h4>
+              <p className="cert__meta">
+                {c.issuer}
+                {c.year && <> · {c.year}</>}
+              </p>
+            </li>
+          ))}
+        </ul>
 
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>M.Sc Data Science</h4>
-                <h5>Coimbatore Institute of Technology · Coimbatore, India</h5>
-              </div>
-              <h3>Jul 2017 – May 2022</h3>
-            </div>
-            <p>
-              Graduated with distinction. Published research on Breast Cancer Prediction using Machine Learning (IJAST Journal). Led departmental academic clubs and organised technical symposiums.
-            </p>
-          </div>
-
-        </div>
+        <h3 className="edu__h edu__h--spaced">Projects &amp; research</h3>
+        {projectsResearch.map((pr) => (
+          <article key={pr.title} className="edu__item">
+            <p className="edu__period">{pr.meta}</p>
+            <h4>{pr.title}</h4>
+            <p>{pr.body}</p>
+          </article>
+        ))}
       </div>
     </div>
-  );
-};
+  </Section>
+);
 
 export default Education;
